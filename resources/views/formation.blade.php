@@ -12,7 +12,7 @@
 						</li>
 						<li><i class='bx bx-chevron-right' ></i></li>
 						<li>
-							<a class="active" href="#">Acceuil</a>
+							<a class="active" href="#">Acceui</a>
 						</li>
 					</ul>
 				</div>
