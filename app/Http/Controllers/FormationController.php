@@ -13,4 +13,9 @@ class FormationController extends Controller
         $count = Formation::count();
         return view('formation', compact('formations', 'count'));
     }
+
+    public function addformation()
+    {
+        
+    }
 }

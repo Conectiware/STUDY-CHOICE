@@ -25,8 +25,8 @@
 				<div class="order">
 					<div class="head">
 						<h3>Liste des formations</h3>
-						<i class='bx bx-plus' ></i>
-						<i class='bx bx-filter' ></i>
+                        <a href="{{ route ('addform')}}"><i class='bx bx-plus' ></i></a>
+                        <i class='bx bx-filter' ></i>
 					</div>
 					<table>
                         <thead>

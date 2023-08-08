@@ -50,6 +50,10 @@ Route::get('/conn', function () {
     return view('connexion');
 })->name('conn');
 
+Route::get('/addform', function () {
+    return view('add_pages.addfor');
+})->name('addform');
+
 
 
 
