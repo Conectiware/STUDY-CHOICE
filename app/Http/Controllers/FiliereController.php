@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Filiere;
+use App\Models\Formation;
+use App\Models\Preparation;
 use Illuminate\Http\Request;
 
 class FiliereController extends Controller
@@ -9,8 +10,9 @@ class FiliereController extends Controller
     //
     public function showAcceuil()
     {
-        $filieres = Filiere::all(); 
-        $count = Filiere::count();
-        return view('acceuil', compact('filieres', 'count'));
+        $formations = Formation::all(); 
+        $count = Formation::count();
+        $preparations = Preparation::all();
+        return view('acceuil', compact('formations', 'count', 'preparations'));
     }
 }

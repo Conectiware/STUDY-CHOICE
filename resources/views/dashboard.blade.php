@@ -19,7 +19,7 @@
 				</div>
 				<a href="#" class="btn-download">
 					<i class='bx bxs-cloud-download' ></i>
-					<span class="text">Download PDF</span>
+					<span class="text">Telecharger PDF</span>
 				</a>
 			</div>
 

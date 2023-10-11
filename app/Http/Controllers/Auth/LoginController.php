@@ -38,6 +38,8 @@ class LoginController extends Controller
             return 'acceuil';
         }
     }
+
+ 
     /**
      * Create a new controller instance.
      *

@@ -43,14 +43,14 @@
                             @foreach($formations as $formation)
                             <tr>
                                 <td>
-                                    <img src="img/people.png">
+                                
                                     <p>{{ $formation->nom }}</p>
                                 </td>
                                 <td>{{ $formation->intitule }}</td>
                                 <td>{{ $formation->niveau }}</td>
                                 <td>{{ $formation->duree }}</td>
                                 <td>{{ $formation->date_debut }}</td>
-                                <td><span class="status {{ $formation->type_cours }}">{{ $formation->type_cours }}</span></td>
+                                <td>{{ $formation->type_cours }}</td>
                             </tr>
                             @endforeach
                         </tbody>

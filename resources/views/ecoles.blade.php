@@ -28,7 +28,7 @@
 				<div class="order">
 					<div class="head">
 						<h3>liste écoles partenaire</h3>
-						<i class='bx bx-plus'></i>
+						<a href="{{ route ('add_school')}}"><i class='bx bx-plus' ></i></a>
 						<i class='bx bx-filter' ></i>
 					</div>
 					<table>

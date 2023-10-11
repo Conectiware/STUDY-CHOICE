@@ -40,13 +40,13 @@
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="{{ route ('inscrit')}}">
 					<i class='bx bx-user'></i>
 					<span class="text">Inscriptions</span>
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="{{ route ('admin.users')}}">
 					<i class='bx bx-badge-check'></i>
 					<span class="text">Administrateurs</span>
 				</a>
@@ -84,7 +84,9 @@
 				<span class="num">8</span>
 			</a>
 			<a href="#" class="profile">
-				<img src="img/people.png">
+				@if(Session::has('profile_picture'))
+    				<img src="{{ asset('storage/' . Session::get('profile_picture')) }}" alt="Profile Picture">
+				@endif
 			</a>
 		</nav>
 		@yield('content')

@@ -10,9 +10,10 @@
 <body>
     <div class="container mt-5">
         <h2>Formulaire de Formation</h2>
-        <form>
+        <form action="{{route ('addformation')}}" method="POST">
+            @csrf
             <div class="form-group">
-                <label for="nom">Nom :</label>
+                <label for="nom">Nom de la formation:</label>
                 <input type="text" class="form-control" id="nom" name="nom" required>
             </div>
             <div class="form-group">
@@ -20,19 +21,16 @@
                 <input type="text" class="form-control" id="intitule" name="intitule" required>
             </div>
             <div class="form-group">
-                <label for="image">Image :</label>
+                <label for="image">Image de la formation :</label>
                 <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required>
             </div>
             <div class="form-group">
-                <label for="niveau">Niveau :</label>
-                <select class="form-control" id="niveau" name="niveau" required>
-                    <option value="intermediaire">DTS</option>
-                    <option value="avance">Licence Professionnelle</option>
-                </select>
+                <label for="intitule">Niveau de la formation :</label>
+                <input type="text" class="form-control" id="niveau" name="niveau" required>
             </div>
             <div class="form-group">
                 <label for="dateDebut">Date de Début :</label>
-                <input type="date" class="form-control" id="dateDebut" name="dateDebut" required>
+                <input type="date" class="form-control" id="dateDebut" name="date_debut" required>
             </div>
             <div class="form-group">
                 <label for="duree">Durée :</label>
@@ -40,9 +38,9 @@
             </div>
             <div class="form-group">
                 <label for="typeCours">Type de Cours :</label>
-                <input type="text" class="form-control" id="typeCours" name="typeCours" required>
+                <input type="text" class="form-control" id="typeCours" name="type_cours" required>
             </div>
-            <button type="submit" class="btn btn-primary">Soumettre</button>
+            <button type="submit" class="btn btn-primary">Ajouter</button>
         </form>
     </div>
     <!-- Inclure les fichiers JavaScript de Bootstrap -->

@@ -51,13 +51,8 @@
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Search Start by tchelo ***** -->
-                    <div class="search-input">
-                      <form id="search" action="#">
-                        <input type="text" placeholder="Entrez un mot clé" id='searchText' name="searchKeyword" onkeypress="handle" />
-                        <i class="fa fa-search"></i>
-                      </form>
-                    </div>
-                    <!-- ***** Serach Start ***** -->
+                    @include('partials.search')
+                    <!-- ***** Search Start ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                         <li class="scroll-to-section"><a href="#top" class="active">Acceuil</a></li>
@@ -398,41 +393,30 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="wrapper">
-                    <div class="row">
-                        @foreach($filieres as $filiere)
-                        <div class="col-lg-3 col-md-6">
+                    @foreach($formations as $formation)
+                        @if($loop->iteration % 3 === 1)
+                        <div class="row">
+                        @endif
+
+                        <div class="col-lg-4">
                             <div class="counter">
                                 <h2 class="timer count-title count-number" data-to="{{ $count }}" data-speed="1000"></h2>
-                                <p class="count-text">{{ $filiere->nom }}</p>
+                                <p class="count-text">{{ $formation->nom }}</p>
+                                <p class="count-text">{{ $formation->programme }}</p>
+                                <p class="count-text">{{ $formation->date_debut }}</p>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6">
-                          <div class="counter">
-                              <h2 class="timer count-title count-number" data-to="{{ $count }}" data-speed="1000"></h2>
-                              <p class="count-text">{{ $filiere->nom }}</p>
-                          </div>
-                      </div>
-                      <div class="col-lg-3 col-md-6">
-                        <div class="counter">
-                            <h2 class="timer count-title count-number" data-to="{{ $count }}" data-speed="1000"></h2>
-                            <p class="count-text">{{ $filiere->nom }}</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                      <div class="counter">
-                          <h2 class="timer count-title count-number" data-to="{{ $count }}" data-speed="1000"></h2>
-                          <p class="count-text">{{ $filiere->nom }}</p>
-                      </div>
-                  </div>
-                        @endforeach
-                        
 
-                    </div>
+                        @if($loop->iteration % 3 === 0 || $loop->last)
+                        </div>
+                        @endif
+                    @endforeach
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 
   <div class="section events" id="events">
     <div class="container">
@@ -443,105 +427,115 @@
             <h2>Licence Professionnelle</h2>
           </div>
         </div>
-        <div class="col-lg-12 col-md-6">
-          <div class="item">
-            <div class="row">
-              <div class="col-lg-3">
-                <div class="image">
-                  <img src="images/event-01.jpg" alt="">
-                </div>
-              </div>
-              <div class="col-lg-9">
-                <ul>
-                  <li>
-                    <span class="category">Économie</span>
-                    <h4>Licence Professionnelle Finance et comptabilité</h4>
-                  </li>
-                  <li>
-                    <span>Date:</span>
-                    <h6>10 Nov 2023</h6>
-                  </li>
-                  <li>
-                    <span>Durée:</span>
-                    <h6>1 an</h6>
-                  </li>
-                  <li>
-                    <span>Type de cours:</span>
-                    <h6>Soir</h6>
-                  </li>
-                </ul>
-                <a href="{{ route('form') }}"><i class="fa fa-angle-right" title="Postuler"></i></a>
-              </div>
+        @foreach($formations as $formation)
+  @if($formation->id === 1)
+    <div class="col-lg-12 col-md-6">
+      <div class="item">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="image">
+              <img src="images/event-02.jpg" alt="">
             </div>
           </div>
-        </div>
-        <div class="col-lg-12 col-md-6">
-          <div class="item">
-            <div class="row">
-              <div class="col-lg-3">
-                <div class="image">
-                  <img src="images/event-02.jpg" alt="">
-                </div>
-              </div>
-              <div class="col-lg-9">
-                <ul>
-                  <li>
-                    <span class="category">Informatique</span>
-                    <h4>Licence Professionnelle Développement Web & Mobile</h4>
-                  </li>
-                  <li>
-                    <span>Date:</span>
-                    <h6>20 nov 2023</h6>
-                  </li>
-                  <li>
-                    <span>Durée:</span>
-                    <h6>1 an</h6>
-                  </li>
-                  <li>
-                    <span>Type de cours:</span>
-                    <h6>Soir</h6>
-                  </li>
-                </ul>
-                <a href="{{ route('form') }}"><i class="fa fa-angle-right" title="Postuler"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-12 col-md-6">
-          <div class="item">
-            <div class="row">
-              <div class="col-lg-3">
-                <div class="image">
-                  <img src="images/event-03.jpg" alt="">
-                </div>
-              </div>
-              <div class="col-lg-9">
-                <ul>
-                  <li>
-                    <span class="category">Gestion des affaires</span>
-                    <h4>Licence professionnelle en Management</h4>
-                  </li>
-                  <li>
-                    <span>Date:</span>
-                    <h6>10 nov 2023</h6>
-                  </li>
-                  <li>
-                    <span>Durée:</span>
-                    <h6>1 an</h6>
-                  </li>
-                  <li>
-                    <span>Type de cours:</span>
-                    <h6>Soir</h6>
-                  </li>
-                </ul>
-                <a href="{{ route('form') }}"><i class="fa fa-angle-right" title="Postuler"></i></a>
-              </div>
-            </div>
+          <div class="col-lg-9">
+            <ul>
+              <li>
+                <span class="category">{{ $formation->intitule }}</span>
+                <h4>{{ $formation->nom }}</h4>
+              </li>
+              <li>
+                <span>Date:</span>
+                <h6>{{ $formation->date_debut }}</h6>
+              </li>
+              <li>
+                <span>Durée:</span>
+                <h6>{{ $formation->duree }}</h6>
+              </li>
+              <li>
+                <span>Type de cours:</span>
+                <h6>{{ $formation->type_cours }}</h6>
+              </li>
+            </ul>
+            <a href="{{ route('form') }}"><i class="fa fa-angle-right" title="Postuler"></i></a>
           </div>
         </div>
       </div>
     </div>
+  @endif
+@endforeach
+
+@foreach($formations as $formation)
+@if($formation->id === 4)
+  <div class="col-lg-12 col-md-6">
+    <div class="item">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="image">
+            <img src="images/event-01.jpg" alt=""> 
+          </div>
+        </div>
+        <div class="col-lg-9">
+          <ul>
+            <li>
+              <span class="category">{{ $formation->intitule }}</span>
+              <h4>{{ $formation->nom }}</h4>
+            </li>
+            <li>
+              <span>Date:</span>
+              <h6>{{ $formation->date_debut }}</h6>
+            </li>
+            <li>
+              <span>Durée:</span>
+              <h6>{{ $formation->duree }}</h6>
+            </li>
+            <li>
+              <span>Type de cours:</span>
+              <h6>{{ $formation->type_cours }}</h6>
+            </li>
+          </ul>
+          <a href="{{ route('form') }}"><i class="fa fa-angle-right" title="Postuler"></i></a>
+        </div>
+      </div>
+    </div>
   </div>
+@endif
+@endforeach
+@foreach($formations as $formation)
+@if($formation->id === 5)
+  <div class="col-lg-12 col-md-6">
+    <div class="item">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="image">
+            <img src="images/event-03.jpg" alt=""> 
+          </div>
+        </div>
+        <div class="col-lg-9">
+          <ul>
+            <li>
+              <span class="category">{{ $formation->intitule }}</span>
+              <h4>{{ $formation->nom }}</h4>
+            </li>
+            <li>
+              <span>Date:</span>
+              <h6>{{ $formation->date_debut }}</h6>
+            </li>
+            <li>
+              <span>Durée:</span>
+              <h6>{{ $formation->duree }}</h6>
+            </li>
+            <li>
+              <span>Type de cours:</span>
+              <h6>{{ $formation->type_cours }}</h6>
+            </li>
+          </ul>
+          <a href="{{ route('form') }}"><i class="fa fa-angle-right" title="Postuler"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+@endif
+@endforeach
 
   <div class="team section" id="team">
     <div class="container">
@@ -702,7 +696,7 @@
   <footer>
     <div class="container">
       <div class="col-lg-12">
-        <p>Copyright © 2023 StudyChoice. Tous droits reservé. &nbsp;&nbsp;&nbsp; Design: <a href="https://conectiware.github.io/Conectiware/index.html" rel="nofollow" target="_blank">ConectiWare</a> &nbsp;&nbsp;&nbsp; Administration: <a href="{{ route('dash') }}" rel="nofollow" target="_blank">Dashboard</a></p>
+        <p>Copyright © 2023 StudyChoice. Tous droits reservé. &nbsp;&nbsp;&nbsp; Design: <a href="https://conectiware.github.io/Conectiware/index.html" rel="nofollow" target="_blank">ConectiWare</a> &nbsp;&nbsp;&nbsp; Administration: <a href="{{ url('/admin') }}" rel="nofollow" target="_blank">Dashboard</a></p>
       </div>
     </div>
   </footer>
@@ -775,3 +769,23 @@ function validateEmail(email) {
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+<!-- img src="images/java.jpg"
+
+
+<div class="search-input">
+    <form id="search" action="#">
+      <input type="text" placeholder="Entrez un mot clé" id='searchText' name="searchKeyword" onkeypress="handle" />
+      <i class="fa fa-search"></i>
+    </form>
+  </div>
+  

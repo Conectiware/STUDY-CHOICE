@@ -20,9 +20,10 @@ Route::get('/', 'FiliereController@showAcceuil')->name('acceuil');
 
 
 
-Route::get('/form', function () {
+/*Route::get('/form', function () {
     return view('formulaire');
-})->name('form');
+})->name('form'); */
+
 Route::get('/developpement', function () {
     return view('dev');
 })->name('developpement');
@@ -53,6 +54,9 @@ Route::get('/conn', function () {
 Route::get('/addform', function () {
     return view('add_pages.addfor');
 })->name('addform');
+Route::get('/add_school', function () {
+    return view('add_pages.addschool');
+})->name('add_school');
 
 
 
@@ -76,7 +80,38 @@ Route::get('auth/google/call-back/', 'GoogleAuthController@callbackGoogle');
 Route::get('/ecoles', 'EcoleController@showEcoles')->name('ecoles');
 Route::get('/users', 'UserController@ShowUser')->name('users');
 Route::get('/formation', 'FormationController@ShowFormation')->name('formation');
+Route::post('/addformation', 'FormationController@addformation')->name('addformation');
+Route::get('/inscrit', 'UserController@ShowInscription')->name('inscrit');
+Route::get('/admin-users', 'UserController@showAdminUsers')->name('admin.users');
+Route::post('/addecole', 'EcoleController@addecoles')->name('addecole');
+Route::post('/addcandidature', 'Admin\CandidatureController@store')->name('addcandidature');
+
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/search', 'FormationController@search')->name('formations.search');
+
+Auth::routes();
+
+// contact
+Route::get('contact', 'ContactController@create')->name('form');
+Route::post('contact', 'ContactController@store')->name('store');
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('admin', 'Admin\AdminController@index');
+Route::resource('admin/roles', 'Admin\RolesController');
+Route::resource('admin/permissions', 'Admin\PermissionsController');
+Route::resource('admin/users', 'Admin\UsersController');
+Route::resource('admin/pages', 'Admin\PagesController');
+Route::resource('admin/candidatures', 'Admin\CandidatureController');
+Route::resource('admin/activitylogs', 'Admin\ActivityLogsController')->only([
+    'index', 'show', 'destroy'
+]);
+Route::resource('admin/settings', 'Admin\SettingsController');
+Route::get('admin/generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator']);
+Route::post('admin/generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@postGenerator']);
+
+Route::resource('admin/écoles', 'EcoleController\ÉcolesController');
