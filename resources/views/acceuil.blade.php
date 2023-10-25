@@ -173,7 +173,7 @@
             </div>
             <div class="main-content">
               <h4>Diplôme reconnu mondialement</h4>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim totam porro error.</p>
+              <p>StudyChoice s'assure que tous les etablissements référencés délivrent des diplômes reconnus officiellement par le Royaume du Maroc.</p>
               <div class="main-button">
                 <a href="#">Postuler</a>
               </div>
@@ -187,7 +187,7 @@
             </div>
             <div class="main-content">
               <h4>Formations liées aux métiers d'avenir</h4>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem impedit est .</p>
+              <p>Chez StudyChoise, nous référençons uniquement des cursus en adéquation avec les métiers émergents et les compétences de demain.</p>
               <div class="main-button">
                 <a href="#">Voir les formations</a>
               </div>
@@ -201,7 +201,7 @@
             </div>
             <div class="main-content">
               <h4>Témoignages d'alumnis</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum modi minus rehffu ueeiy4  y3g34hi4ojhqiue.</p>
+              <p>Sur StudyChoise,les fiches de chaque formation présentent des témoignages vérifiés d'anciens élèves partageant leur retour d'expérience Ces avis permettent d'appréhender la qualité des enseignements.</p>
               <div class="main-button">
                 <a href="#">Voir</a>
               </div>
@@ -225,7 +225,7 @@
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor incididunt ut labore consectetur <code>adipiscing</code> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                  StudyChoice <strong>est né</strong>, du constat que les étudiants rencontrent de réelles difficultés pour s’orienter dans le paysage complexe de l’enseignement supérieur. Face à ce problème, nous avons eu l’idée de créer une plateforme réunissant toutes les informations essentielles sur les formations disponibles au Maroc.
                 </div>
               </div>
             </div>
@@ -237,14 +237,16 @@
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor incididunt ut labore consectetur <code>adipiscing</code> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                  En référençant <strong>vos formations</strong>,sur notre plateforme, vous bénéficiez d’une vitrine de choix pour promouvoir vos formations auprès de votre cible.
+
+                  Notre plateforme, de par son sérieux et sa neutralité, jouit déjà d’une excellente réputation auprès des élèves et de leurs parents pour les guider vers les meilleures orientations possibles.
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Pourquoi nous choisir?
+                  Oú nous trouver?
                 </button>
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
@@ -261,7 +263,7 @@
               </h2>
               <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  You can also search on Google with specific keywords such as <code>templatemo business templates, templatemo gallery templates, admin dashboard templatemo, 3-column templatemo, etc.</code>
+                  StudyChoise s'assure que tous les établissements référencés délivrent des diplômes reconnus officiellement par le Royaume du Maroc. Les cursus présents sur notre plateforme sont validés par le ministère marocain de l'Enseignement Supérieur, de la Recherche Scientifique et de la Formation des Cadres.    Enfin, nous sommes des partenaires exigeants qui n’acceptons que des formations reconnues et de qualité, ce qui renforce la crédibilité et l’image de marque des cursus que nous référençons.
                 </div>
               </div>
             </div>
@@ -543,7 +545,7 @@
         <div class="col-lg-3 col-md-6">
           <div class="team-member">
             <div class="main-content">
-              <img src="images/delon.jpg" alt="">
+              <img src="images/adnane.jpeg" alt="">
               <span class="category">Community Manager</span>
               <h4>Adnane Benhassoun</h4>
               <ul class="social-icons">
