@@ -78,7 +78,7 @@ class CandidatureController extends Controller
 
         Candidature::create($requestData);
 
-        return redirect('admin/candidatures')->with('flash_message', ' Candidature ajoutée!');
+        // return redirect('admin/candidatures')->with('flash_message', ' Candidature ajoutée!');
     }
 
     /**

@@ -101,7 +101,7 @@ Route::post('contact', 'ContactController@store')->name('store');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('admin', 'Admin\AdminController@index')->middleware('Panel');
+Route::get('admin', 'Admin\AdminController@index');
 Route::resource('admin/roles', 'Admin\RolesController');
 Route::resource('admin/permissions', 'Admin\PermissionsController');
 Route::resource('admin/users', 'Admin\UsersController');

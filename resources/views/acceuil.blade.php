@@ -709,16 +709,15 @@ var to = "bessahenoc88@gmail.com";
 var subject = "Nouveau Message";
 
 document.getElementById('form-submit').addEventListener('click', function(event) {
-  event.preventDefault(); // Empêcher la soumission du formulaire par défaut
+  event.preventDefault(); 
 
   var nom = document.getElementById('name').value;
   var adresse = document.getElementById('email').value;
   var message = "Nom : " + nom + "\nAdresse : " + adresse + "\n\n" + document.getElementById('message').value;
 
-  // Vérifier si l'e-mail est valide
   if (!validateEmail(adresse)) {
     alert('Adresse e-mail non valide.');
-    return; // Arrêter l'exécution de la fonction
+    return; 
   }
 
   fetch('https://codingmailer.onrender.com/send-email', {
